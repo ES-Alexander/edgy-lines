@@ -6,7 +6,7 @@
 # Date: 6 Apr 2019                          #
 #                                           #
 #############################################
-from TestRun import TestRun
+from testrun.TestRun import TestRun
 from Edge2 import *
 
 class EdgeTests(TestRun):
@@ -15,27 +15,27 @@ class EdgeTests(TestRun):
         ''' Tests the 'is_point' method. '''
         assert Edge.is_point([0,0,0,0]), "Should have been point."
         assert not Edge.is_point([0,0,1,1]), "Should not have been point."
-        
+
     def test_get_line_points(self):
         ''' Tests the 'get_line_points' method. '''
         assert (Edge.get_line_points(np.array([[0,0,1,1]]),0) ==\
                 np.array([[0,0],[1,1]])).all()
-        
+
     def test_distsq(self):
         ''' Tests the 'distsq' method. '''
         assert Edge.distsq(np.array([0,0]),np.array([0,1])) == 1,\
                "Dist should have been 1."
-        
+
     def test_get_line(self):
         ''' '''
         res = Edge.get_line(np.array([[0,0],[0,1],[0,2],[0,3]]))
         assert (res == np.array([0,0,0,3])).all(), "{}".format(res)
-        
+
     def test_equal_lines(self):
         ''' '''
         assert Edge.equal_lines(np.array([0,0,0,1]),np.array([0,1,0,0]))
         assert not Edge.equal_lines(np.array([0,1,8,2]),np.array([3,4,5,6]))
-        
+
     def test_add_new_lines(self):
         ''' '''
         assert (Edge.add_new_lines(np.array([[0,0,0,1]]),
@@ -47,7 +47,6 @@ class EdgeTests(TestRun):
 
     def test_duplicate_point(self):
         ''' '''
-        
         assert Edge.duplicate_point([[1,1],[1,1]]), "[1,1] == [1,1]"
         assert not Edge.duplicate_point([[1,2],[1,1]]), "[1,2] != [1,1]"
 
