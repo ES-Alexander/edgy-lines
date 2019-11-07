@@ -3,11 +3,14 @@
 #                                           #
 # Test module for Edge2.py                  #
 # Author: ES Alexander                      #
-# Date: 6 Apr 2019                          #
+# Date: 06/Apr/2019                         #
+# Modified: 07/Nov/2019                     #
 #                                           #
 #############################################
 from testrun.TestRun import TestRun
-from Edge2 import *
+import sys
+sys.path.append('..') # allow Edge2 to be detected
+from edgy_lines.Edge2 import *
 
 class EdgeTests(TestRun):
     ''' A class for testing the Edge class methods. '''
