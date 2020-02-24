@@ -1,0 +1,9 @@
+README.md
+setup.py
+edgy_lines/Edge2.py
+edgy_lines/__init__.py
+edgy_lines.egg-info/PKG-INFO
+edgy_lines.egg-info/SOURCES.txt
+edgy_lines.egg-info/dependency_links.txt
+edgy_lines.egg-info/requires.txt
+edgy_lines.egg-info/top_level.txt
